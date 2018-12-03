@@ -1,7 +1,7 @@
 // 入口文件
 import Vue from 'vue'
 import app from './App.vue'
-//导入MUI的 样式
+//导入MUI的样式
 import './lib/mui/css/mui.min.css'
 
 // 按需导入Mint-UI中的组件
