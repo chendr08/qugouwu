@@ -6,4 +6,10 @@
 ### git commit -m "init my project"
 ##2.上传到远端的gitHub
 ##3.上传到码云, gitee.com
-##4. pm2 start/stop/logs all     
+##4. pm2 start/stop/logs all    
+
+
+
+
+
+
