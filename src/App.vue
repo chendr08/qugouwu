@@ -41,6 +41,7 @@
 <style lang="scss"  scoped>
    .app-container {
      padding-top: 40px;
+		 padding-bottom: 50px;
 		 overflow: hidden;//1.1解决动画出现滚动条的问题
    }
 	// 路由切换动画
