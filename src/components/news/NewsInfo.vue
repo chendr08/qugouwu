@@ -38,7 +38,7 @@
     <!-- <div class="newsInfoContainer">
         <h3 class="title">{{ newsInfo.title }}</h3>
         <p class="subtitle">
-            <span>发表时间：{{ newsInfo.add_time }}</span>
+            <span>发表时间：{{ newsInfo.add_time | dateFormat }}</span>
             <span>点击：{{newsInfo.click}}次</span>
         </p>
         <hr>
@@ -61,7 +61,7 @@ export default {
         };  
     },
     created() {
-             getNewsInfo();
+             this.getNewsInfo();
         },
     methods:{
         getNewsInfo(){

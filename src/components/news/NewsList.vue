@@ -149,7 +149,7 @@ export default {
         };
     },
     created() {
-        getNewsList(); //调用获取数据的方法
+        this.getNewsList(); //调用获取数据的方法
     },
     methods: {
         getNewsList(){ //获取轮播图的数据,配置全局根路径后api/getlunbo前面不能带/
