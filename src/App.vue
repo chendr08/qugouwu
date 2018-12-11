@@ -1,7 +1,11 @@
 <template>
   <div class="app-container">
     <!-- header部分 -->
-    <mt-header fixed title="趣购物"></mt-header>
+    <mt-header fixed title="趣购物">
+			<span  slot="left">
+    		<mt-button icon="back" @click="back" v-show="flag">返回</mt-button>
+  		</span>
+		</mt-header>
 
     <!-- router-view中心内容区域 -->
 		<transition>
@@ -34,7 +38,30 @@
 </template>
 
 <script>
-
+	export default {
+		data(){
+			return {
+				flag: true //默认显示返回按钮
+			};
+		},
+		created(){
+			this.flag = this.$route.path === '/home'? false : true;
+		},
+		methods:{
+			back(){ //点击后退
+				this.$router.go(-1);
+			}
+		},
+		watch:{ //属性值监听
+			'$route.path': function(newVal){
+				if(newVal === '/home'){
+					this.flag = false;
+				}else{
+					this.flag = true;
+				}
+			}
+		}
+	}
 </script>
 
 
