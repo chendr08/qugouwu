@@ -155,7 +155,7 @@ export default {
         getNewsList(){ //获取轮播图的数据,配置全局根路径后api/getlunbo前面不能带/
             this.$http.get('api/getnewslist').then(result => {
                 if(result.body.status === 0){ //成功
-                    this.newsList = rusult.body.message;
+                    this.newsList = result.body.message;
                     Toast('获取新数据成功--测试');
                 } else { //失败
                     Toast('获取新闻数据失败');

@@ -5,7 +5,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 //1.2安装路由,括号里不加引号
 Vue.use(VueRouter)
-//2.1导入vue-resource
+//2.1导入vue-resource,Vue-Resource主要用于发送ajax请求，Vue从后台获取数据的插件
 import VueResource from 'vue-resource'
 //2.2安装vue-resource
 Vue.use(VueResource)
@@ -130,7 +130,7 @@ import './lib/mui/css/mui.min.css'
 import './lib/mui/css/icons-extra.css'
 
 // 按需导入Mint-UI中的组件
-import { Header,Swipe,SwipeItem,Button,Lazyload,Switch  } from 'mint-ui'
+import { Header,Swipe,SwipeItem,Button,Lazyload,Switch } from 'mint-ui'
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
@@ -153,5 +153,5 @@ var vm = new Vue({
     el: '#app',
     render: c => c(app),
     router, //1.4 注册路由
-    store
+    store //注册store数据共享仓库
 })

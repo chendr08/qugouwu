@@ -2,15 +2,15 @@
   <div class="app-container">
     <!-- header部分 -->
     <mt-header fixed title="趣购物">
-			<span  slot="left">
+		<span  slot="left">
     		<mt-button icon="back" @click="back" v-show="flag">返回</mt-button>
   		</span>
-		</mt-header>
+	</mt-header>
 
     <!-- router-view中心内容区域 -->
-		<transition>
-    <router-view></router-view>
-		</transition>
+	<transition>
+    	<router-view></router-view>
+	</transition>
     <!-- tabBar底部切换 -->
     <nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-cdr-item " to="/home">
@@ -21,13 +21,13 @@
 				<span class="mui-icon mui-icon-contact"></span>
 				<span class="mui-tab-label">会员</span>
 			</router-link>
-			<router-link class="mui-tab-cdr-item" to="shopcar">
+			<router-link class="mui-tab-cdr-item" to="/shopcar">
 				<span class="mui-icon mui-icon-extra mui-icon-extra-cart">
 					<span class="mui-badge" id="badge">{{ $store.getters.getAllCount }}</span>
 				</span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
-			<router-link class="mui-tab-cdr-item" to="search">
+			<router-link class="mui-tab-cdr-item" to="/search">
 				<span class="mui-icon mui-icon-search"></span>
 				<span class="mui-tab-label">搜索</span>
 			</router-link>
@@ -68,8 +68,8 @@
 <style lang="scss"  scoped>
    .app-container {
      padding-top: 40px;
-		 padding-bottom: 50px;
-		 overflow: hidden;//1.1解决动画出现滚动条的问题
+	 padding-bottom: 50px;
+	 overflow: hidden;//1.1解决动画出现滚动条的问题
    }
 	// 路由切换动画
 	 .v-enter { //1.2分开写，解决动画进出方向顺序的问题

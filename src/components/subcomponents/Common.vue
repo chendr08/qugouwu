@@ -159,7 +159,7 @@ export default {
             if(this.msg.length === 0 ){
                 Toast('评论内如不能为空');
             }
-            this.$http.post('api/postcomment/'+this.route.params.id, {content : this.msg.trim() })
+            this.$http.post('api/postcomment/'+this.$route.params.id, {content : this.msg.trim() })
             .then(result => {
                 if(result.body.status === 0) {
                     var cmt = {
